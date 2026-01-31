@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P File Sharing System - Sowanga Mbane</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>P2P File Sharing System</h1>
+        <p>Simplified BitTorrent-style P2P file sharing with a UDP tracker, TCP transfers, and SHA-256 integrity checks.</p>
+        <a href="https://github.com/itsowanga/p2p-file-sharing-system">GitHub</a>
+        <p>Python | Sockets | UDP | TCP | Threading | SHA-256 | Tkinter</p>
+        <div class="project-image">
+            <img src="./images/p2p.png" alt="Architecture diagram">
+            <img src="./images/p2p2.png" alt="GUI screenshot with progress bar">
+            <img src="./images/p2p3.png" alt="Terminal screenshot showing register/download/verify">
+        </div>
+        <div class="features">
+            <h4>Features:</h4>
+            <ul>
+                <li>Tracker registers seeders + file hashes</li>
+                <li>Peers discover seeders via UDP</li>
+                <li>File transfers via TCP (chunked)</li>
+                <li>SHA-256 verification after download (auto + manual)</li>
+               
+            </ul>
+        <div class="project-how-it-works">
+            <h4>How it works:</h4>
+            <ol>
+                <li>Seeder registers file + hash with tracker (UDP)</li>
+                <li>Leecher requests seeders list (UDP)</li>
+                <li>Leecher downloads from chosen peer (TCP)</li>
+                <li>Hash verifies integrity; if fail → try next seeder</li>
+                <li>Complete file download with progress bar (Tkinter)</li>
+            </ol>
+            </div> 
+        </div>
+    <div class="challenges">
+        <h4>Challenges:</h4>
+        <ul>
+            <li>Handling peers going offline (heartbeat + timeout)</li>
+            <li>Avoiding blocking during transfers (multithreading)</li>
+            <li>Verification failure handling (delete corrupted file + fallback seeder)</li>
+        </ul>
+    </div>
+    <div class="improvements">
+        <h4>Improvements:</h4>
+        <ul>
+            <li>Add encryption/authentication</li>
+            <li>Support wide-area networks (NAT traversal)</li>
+            <li>Better chunking/resume downloads (more BitTorrent-like)</li>
+        </ul>
+    </div>
+    
+    </main>
+    <footer>
+        <p>Copyright 2026 Sowanga Mbane</p>
+        <a href="mailto:sowanga.mbane@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/sowanga-mbane-9b1b1b1b1b/">LinkedIn</a>
+        <a href="https://github.com/itsowanga">GitHub</a>
+        <a href="https://www.instagram.com/its.sowanga/">Instagram</a>
+    </footer>
+</body>
+</html>
