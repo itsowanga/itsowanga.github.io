@@ -8,11 +8,200 @@
     <style>
         @import url("./style.css?v=2");
     </style>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #102a43;
+            background: #f5f7fb;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        a {
+            color: #0f766e;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: #0b1220;
+            color: #f8fafc;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        nav p {
+            font-weight: 700;
+            letter-spacing: 0.4px;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #cbd5f5;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+        }
+
+        .nav-brand img {
+            height: 36px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-brand span {
+            color: #cbd5f5;
+        }
+
+        nav a.nav-brand {
+            color: #cbd5f5;
+            text-decoration: none;
+        }
+
+        nav a.nav-brand:hover {
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 18px;
+        }
+
+        nav a {
+            color: #cbd5f5;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 20px 64px;
+            width: 100%;
+            flex: 1;
+        }
+
+        .projects-page {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+            margin-bottom: 24px;
+        }
+
+        .projects-page h1 {
+            margin-bottom: 8px;
+        }
+
+        .projects-page p {
+            color: #486581;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .project-item {
+            border: 1px solid #e3e8f0;
+            padding: 16px;
+            border-radius: 10px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 260px;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .project-item h2 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .project-item p {
+            margin-bottom: 10px;
+            color: #486581;
+        }
+
+        .project-links {
+            margin-top: auto;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .project-links a {
+            font-weight: 600;
+        }
+
+        footer {
+            background: #0b1220;
+            color: #f8fafc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #cbd5f5;
+            margin: 0 6px;
+        }
+
+        @media (max-width: 900px) {
+            .project-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 </head>
 <body class="page-projects">
     <header>
         <nav>
-            <p>Sowanga Mbane</p>
+            <a class="nav-brand" href="index.html">
+                <img src="./assets/logo.png" alt="Sowanga Mbane logo">
+            </a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -27,33 +216,33 @@
         </section>
         <div class="project-container">
             <div class="project-item">
-                <img src="./images/p2p.png" alt="Peer-to-Peer File Sharing System">
+                <img src="./assets/p2p.png" alt="Peer-to-Peer File Sharing System">
                 <h2>Peer-to-Peer File Sharing System</h2>
                 <p>A peer-to-peer file sharing system that allows users to share files with each other.</p>
                 <p>Python | Tkinter | Socket Programming</p>
                 <div class="project-links">
                     <a href="./p2p.html">View Project</a>
-                    <a href="https://github.com/itsowanga/p2p-file-sharing-system">GitHub</a>
+                    <a href="https://github.com/itsowanga/p2p-file-sharing-system" target="_blank">GitHub</a>
                 </div>
             </div>
             <div class="project-item">
-                <img src="./images/codepulse.png" alt="CodePulse - Offline Productivity Tracker">
+                <img src="./assets/pulse.png" alt="CodePulse - Offline Productivity Tracker">
                 <h2>CodePulse - Offline Productivity Tracker</h2>
                 <p>A tool that helps you track your productivity and code time.</p>
                 <p>Python | C++ | SQLite | Chart.js</p>
                 <div class="project-links">
                     <a href="./codepulse.html">View Project</a>
-                    <a href="https://github.com/itsowanga/codepulse">GitHub</a>
+                    <a href="https://github.com/itsowanga/codepulse" target="_blank">GitHub</a>
                 </div>
             </div>
             <div class="project-item">
-                <img src="./images/farmyield.png" alt="FarmYield Predictor - Decision Support Tool">
+                <img src="./assets/farm.png" alt="FarmYield Predictor - Decision Support Tool">
                 <h2>FarmYield Predictor - Decision Support Tool</h2>
                 <p>A tool that helps you predict the yield of your farm.</p>
                 <p>Python | C++ | Machine Learning </p>
                 <div class="project-links">
                     <a href="./farmyield.html">View Project</a>
-                    <a href="https://github.com/itsowanga/farmyield-predictor">GitHub</a>
+                    <a href="https://github.com/itsowanga/farmyield-predictor" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
@@ -61,9 +250,8 @@
     <footer>
         <p>Copyright 2026 Sowanga Mbane</p>
         <a href="mailto:sowanga.mbane@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/sowanga-mbane-9b1b1b1b1b/">LinkedIn</a>
-        <a href="https://github.com/itsowanga">GitHub</a>
-        <a href="https://www.instagram.com/its.sowanga/">Instagram</a>
+        <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/itsowanga" target="_blank">GitHub</a>
     </footer>
 </body>
 </html>
