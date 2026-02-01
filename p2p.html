@@ -25,17 +25,17 @@
             <img src="./images/p2p2.png" alt="GUI screenshot with progress bar">
             <img src="./images/p2p3.png" alt="Terminal screenshot showing register/download/verify">
         </div>
-        <div class="features">
-            <h4>Features:</h4>
+        <section class="features">
+            <h2>Features</h2>
             <ul>
                 <li>Tracker registers seeders + file hashes</li>
                 <li>Peers discover seeders via UDP</li>
                 <li>File transfers via TCP (chunked)</li>
                 <li>SHA-256 verification after download (auto + manual)</li>
-               
             </ul>
-        <div class="project-how-it-works">
-            <h4>How it works:</h4>
+        </section>
+        <section class="project-how-it-works">
+            <h2>How it works</h2>
             <ol>
                 <li>Seeder registers file + hash with tracker (UDP)</li>
                 <li>Leecher requests seeders list (UDP)</li>
@@ -43,24 +43,23 @@
                 <li>Hash verifies integrity; if fail → try next seeder</li>
                 <li>Complete file download with progress bar (Tkinter)</li>
             </ol>
-            </div> 
-        </div>
-    <div class="challenges">
-        <h4>Challenges:</h4>
+        </section> 
+    <section class="challenges">
+        <h2>Challenges</h2>
         <ul>
             <li>Handling peers going offline (heartbeat + timeout)</li>
             <li>Avoiding blocking during transfers (multithreading)</li>
             <li>Verification failure handling (delete corrupted file + fallback seeder)</li>
         </ul>
-    </div>
-    <div class="improvements">
-        <h4>Improvements:</h4>
+    </section>
+    <section class="improvements">
+        <h2>Improvements</h2>
         <ul>
             <li>Add encryption/authentication</li>
             <li>Support wide-area networks (NAT traversal)</li>
             <li>Better chunking/resume downloads (more BitTorrent-like)</li>
         </ul>
-    </div>
+    </section>
     
     </main>
     <footer>

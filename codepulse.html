@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePulse - Offline Productivity Tracker - Sowanga Mbane</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>CodePulse - Offline Productivity Tracker</h1>
+        <p>Tracks coding activity locally and surfaces real-time productivity stats.</p>
+        <a href="https://github.com/itsowanga/codepulse">GitHub</a>
+        <p>Python | C++ | SQLite | JavaScript</p>
+        <div class="project-image">
+            <img src="./images/codepulse1.png" alt="CodePulse - Offline Productivity Tracker">
+            <img src="./images/codepulse2.png" alt="CodePulse dashboard charts">
+            <img src="./images/codepulse3.png" alt="CodePulse session summary view">
+        </div>
+        <section class="project-features">
+            <h2>Features</h2>
+            <ul>
+                <li>Tracks active window and file extension across editors</li>
+                <li>Logs sessions locally (offline-first)</li>
+                <li>Serves real-time stats via REST API</li>
+                <li>Auto-updating dashboard charts</li>
+                <li>Language and project breakdown</li>
+                <li>PDF report export</li>
+            </ul>
+        </section>
+        <section class="project-how-it-works">
+            <h2>How it works</h2>
+            <ol>
+                <li>C++ monitor records sessions into SQLite</li>
+                <li>API reads the DB and exposes endpoints</li>
+                <li>Dashboard polls the API and updates charts</li>
+                <li>Optional PDF export generates reports</li>
+            </ol>
+        </section>
+        <section class="challenges">
+            <h2>Challenges</h2>
+            <ul>
+                <li>Accurate active-window detection and noise filtering</li>
+                <li>Keeping the dashboard responsive while querying the DB</li>
+                <li>Generating clean PDFs with charts</li>
+            </ul>
+        </section>
+        <section class="improvements">
+            <h2>Improvements</h2>
+            <ul>
+                <li>Better editor detection rules</li>
+                <li>Configurable tracking exclusions</li>
+                <li>More analytics like streak goals and weekly trends</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright 2026 Sowanga Mbane</p>
+    </footer>
+</body>
+</html>
