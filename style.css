@@ -388,11 +388,27 @@ body.page-project .project-image {
     margin: 16px 0 24px;
 }
 
+body.page-project .project-image a {
+    display: block;
+    text-decoration: none;
+}
+
+body.page-project .project-image a:focus {
+    outline: 2px solid #0f766e;
+    outline-offset: 4px;
+}
+
 body.page-project .project-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    cursor: zoom-in;
+    transition: transform 0.2s ease;
+}
+
+body.page-project .project-image a:hover img {
+    transform: scale(1.01);
 }
 
 body.page-project section {
