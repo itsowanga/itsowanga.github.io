@@ -4,8 +4,16 @@
     // --- Theme Toggle ---
     const root = document.documentElement;
 
+    function storageGet(key) {
+        try { return localStorage.getItem(key); } catch { return null; }
+    }
+
+    function storageSet(key, val) {
+        try { localStorage.setItem(key, val); } catch { /* file:// or private mode */ }
+    }
+
     function getPreferredTheme() {
-        const stored = localStorage.getItem('theme');
+        const stored = storageGet('theme');
         if (stored) return stored;
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
@@ -22,13 +30,13 @@
         const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
         const next = current === 'dark' ? 'light' : 'dark';
         applyTheme(next);
-        localStorage.setItem('theme', next);
+        storageSet('theme', next);
     }
 
     applyTheme(getPreferredTheme());
 
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        if (!localStorage.getItem('theme')) {
+        if (!storageGet('theme')) {
             applyTheme(e.matches ? 'dark' : 'light');
         }
     });
