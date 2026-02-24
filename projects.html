@@ -3,255 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Sowanga Mbane</title>
-    <link rel="stylesheet" href="./style.css?v=2">
-    <style>
-        @import url("./style.css?v=2");
-    </style>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html,
-        body {
-            height: 100%;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #102a43;
-            background: #f5f7fb;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100%;
-        }
-
-        a {
-            color: #0f766e;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        header {
-            background: #0b1220;
-            color: #f8fafc;
-        }
-
-        nav {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 16px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-        }
-
-        nav p {
-            font-weight: 700;
-            letter-spacing: 0.4px;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #cbd5f5;
-            font-weight: 700;
-            letter-spacing: 0.4px;
-        }
-
-        .nav-brand img {
-            height: 36px;
-            width: auto;
-            display: block;
-        }
-
-        .nav-brand span {
-            color: #cbd5f5;
-        }
-
-        nav a.nav-brand {
-            color: #cbd5f5;
-            text-decoration: none;
-        }
-
-        nav a.nav-brand:hover {
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 18px;
-        }
-
-        nav a {
-            color: #cbd5f5;
-        }
-
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 32px 20px 64px;
-            width: 100%;
-            flex: 1;
-        }
-
-        .projects-page {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
-            margin-bottom: 24px;
-        }
-
-        .projects-page h1 {
-            margin-bottom: 8px;
-        }
-
-        .projects-page p {
-            color: #486581;
-        }
-
-        .project-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .project-item {
-            border: 1px solid #e3e8f0;
-            padding: 16px;
-            border-radius: 10px;
-            background: #ffffff;
-            display: flex;
-            flex-direction: column;
-            min-height: 260px;
-            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
-        }
-
-        .project-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 12px;
-        }
-
-        .project-item h2 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .project-item p {
-            margin-bottom: 10px;
-            color: #486581;
-        }
-
-        .project-links {
-            margin-top: auto;
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .project-links a {
-            font-weight: 600;
-        }
-
-        footer {
-            background: #0b1220;
-            color: #f8fafc;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: #cbd5f5;
-            margin: 0 6px;
-        }
-
-        @media (max-width: 900px) {
-            .project-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-            }
-        }
-    </style>
+    <meta name="description" content="Projects by Sowanga Mbane — P2P file sharing, CodePulse productivity tracker, FarmYield predictor, and more.">
+    <meta name="author" content="Sowanga Mbane">
+    <meta property="og:title" content="Projects — Sowanga Mbane">
+    <meta property="og:description" content="Explore backend systems, data tools, and networking projects by Sowanga Mbane.">
+    <meta property="og:type" content="website">
+    <title>Projects — Sowanga Mbane</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body class="page-projects">
-    <header>
-        <nav>
+<body>
+
+    <a class="skip-nav" href="#main">Skip to content</a>
+
+    <header class="header">
+        <nav class="nav">
             <a class="nav-brand" href="index.html">
-                <img src="./assets/logo.png" alt="Sowanga Mbane logo">
+                <img src="./assets/logo.png" alt="Sowanga Mbane" width="36" height="36">
             </a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" aria-current="page">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Resume.pdf" class="btn-nav" download>Resume</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
         </nav>
     </header>
-    <main>
-        <section class="projects-page">
-            <h1>Projects</h1>
-            <p>Here are some of the projects I have worked on.</p>
-        </section>
-        <div class="project-container">
-            <div class="project-item">
-                <img src="./assets/p2p.png" alt="Peer-to-Peer File Sharing System">
-                <h2>Peer-to-Peer File Sharing System</h2>
-                <p>A peer-to-peer file sharing system that allows users to share files with each other.</p>
-                <p>Python | Tkinter | Socket Programming</p>
-                <div class="project-links">
-                    <a href="./p2p.html">View Project</a>
-                    <a href="https://github.com/itsowanga/p2p-file-sharing-system" target="_blank">GitHub</a>
-                </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-backdrop"></div>
+        <div class="mobile-menu-panel">
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <div class="mobile-menu-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" aria-current="page">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Resume.pdf" download>Download Resume</a>
             </div>
-            <div class="project-item">
-                <img src="./assets/pulse.png" alt="CodePulse - Offline Productivity Tracker">
-                <h2>CodePulse - Offline Productivity Tracker</h2>
-                <p>A tool that helps you track your productivity and code time.</p>
-                <p>Python | C++ | SQLite | Chart.js</p>
-                <div class="project-links">
-                    <a href="./codepulse.html">View Project</a>
-                    <a href="https://github.com/itsowanga/codepulse" target="_blank">GitHub</a>
-                </div>
+            <div class="mobile-menu-social">
+                <a href="https://github.com/itsowanga" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
             </div>
-            <div class="project-item">
-                <img src="./assets/farm.png" alt="FarmYield Predictor - Decision Support Tool">
-                <h2>FarmYield Predictor - Decision Support Tool</h2>
-                <p>A tool that helps you predict the yield of your farm.</p>
-                <p>Python | C++ | Machine Learning </p>
-                <div class="project-links">
-                    <a href="./farmyield.html">View Project</a>
-                    <a href="https://github.com/itsowanga/farmyield-predictor" target="_blank">GitHub</a>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <div class="container">
+            <div class="page-header">
+                <h1>Projects</h1>
+                <p>Backend systems, data tools, and networking projects I've built during my studies and personal time.</p>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="networking">Networking</button>
+                    <button class="filter-btn" data-filter="ml">Machine Learning</button>
                 </div>
             </div>
         </div>
+
+        <div class="container projects-page-grid">
+            <div class="projects-grid">
+
+                <a href="p2p.html" class="project-card" data-category="python networking">
+                    <div class="project-card-thumb">
+                        <img src="./assets/p2p.png" alt="Peer-to-Peer File Sharing System" loading="lazy">
+                        <div class="project-card-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>P2P File Sharing System</h3>
+                        <p>A peer-to-peer file sharing system with UDP tracker, TCP transfers, and SHA-256 integrity checks.</p>
+                        <div class="project-card-tech">
+                            <span>Python</span>
+                            <span>Sockets</span>
+                            <span>UDP/TCP</span>
+                            <span>Tkinter</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="codepulse.html" class="project-card" data-category="python">
+                    <div class="project-card-thumb">
+                        <img src="./assets/pulse.png" alt="CodePulse - Offline Productivity Tracker" loading="lazy">
+                        <div class="project-card-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>CodePulse — Productivity Tracker</h3>
+                        <p>Tracks coding activity locally and surfaces real-time productivity stats via a live dashboard.</p>
+                        <div class="project-card-tech">
+                            <span>Python</span>
+                            <span>C++</span>
+                            <span>SQLite</span>
+                            <span>Chart.js</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="farmyield.html" class="project-card" data-category="python ml">
+                    <div class="project-card-thumb">
+                        <img src="./assets/farm.png" alt="FarmYield Predictor" loading="lazy">
+                        <div class="project-card-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>FarmYield Predictor</h3>
+                        <p>Offline-first yield prediction and risk alerts for smallholder maize farmers using regression models.</p>
+                        <div class="project-card-tech">
+                            <span>Python</span>
+                            <span>C++</span>
+                            <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
     </main>
-    <footer>
-        <p>Copyright 2026 Sowanga Mbane</p>
-        <a href="mailto:sowanga.mbane@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/itsowanga" target="_blank">GitHub</a>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Sowanga Mbane</p>
+            <div class="footer-links">
+                <a href="mailto:sowanga.mbane@gmail.com">Email</a>
+                <a href="https://github.com/itsowanga" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="./main.js"></script>
 </body>
 </html>

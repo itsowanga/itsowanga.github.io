@@ -3,80 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P2P File Sharing System - Sowanga Mbane</title>
+    <meta name="description" content="P2P File Sharing System — Simplified BitTorrent-style file sharing with UDP tracker, TCP transfers, and SHA-256 integrity checks.">
+    <meta name="author" content="Sowanga Mbane">
+    <meta property="og:title" content="P2P File Sharing System — Sowanga Mbane">
+    <meta property="og:description" content="Simplified BitTorrent-style P2P file sharing with a UDP tracker, TCP transfers, and SHA-256 integrity checks.">
+    <meta property="og:type" content="website">
+    <title>P2P File Sharing System — Sowanga Mbane</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body class="page-project">
-    <header>
-        <nav>
+<body>
+
+    <a class="skip-nav" href="#main">Skip to content</a>
+
+    <header class="header">
+        <nav class="nav">
             <a class="nav-brand" href="index.html">
-                <img src="./assets/logo.png" alt="Sowanga Mbane logo">
+                <img src="./assets/logo.png" alt="Sowanga Mbane" width="36" height="36">
             </a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Resume.pdf" class="btn-nav" download>Resume</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
         </nav>
     </header>
-    <main>
-        <h1>P2P File Sharing System</h1>
-        <p>Simplified BitTorrent-style P2P file sharing with a UDP tracker, TCP transfers, and SHA-256 integrity checks.</p>
-        <p>Python | Sockets | UDP | TCP | Threading | SHA-256 | Tkinter</p>
-        <a class="btn-link" href="https://github.com/itsowanga/p2p-file-sharing-system" target="_blank">GitHub</a>
-        <div class="project-image">
-            <a href="./assets/p2p-seq.png" target="_blank" rel="noopener">
-                <img src="./assets/p2p-seq.png" alt="Sequence Diagram">
-            </a>
-            <a href="./assets/p2p-down.png" target="_blank" rel="noopener">
-                <img src="./assets/p2p-down.png" alt="GUI">
-            </a>
-            <a href="./assets/p2p-terminal.png" target="_blank" rel="noopener">
-                <img src="./assets/p2p-terminal.png" alt="Terminal screenshot">
-            </a>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-backdrop"></div>
+        <div class="mobile-menu-panel">
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <div class="mobile-menu-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Resume.pdf" download>Download Resume</a>
+            </div>
+            <div class="mobile-menu-social">
+                <a href="https://github.com/itsowanga" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
         </div>
-        <section class="features">
-            <h2>Features</h2>
-            <ul>
-                <li>Tracker registers seeders + file hashes</li>
-                <li>Peers discover seeders via UDP</li>
-                <li>File transfers via TCP (chunked)</li>
-                <li>SHA-256 verification after download (auto + manual)</li>
-            </ul>
-        </section>
-        <section class="project-how-it-works">
-            <h2>How it works</h2>
-            <ol>
-                <li>Seeder registers file + hash with tracker (UDP)</li>
-                <li>Leecher requests seeders list (UDP)</li>
-                <li>Leecher downloads from chosen peer (TCP)</li>
-                <li>Hash verifies integrity; if fail → try next seeder</li>
-                <li>Complete file download with progress bar (Tkinter)</li>
-            </ol>
-        </section> 
-    <section class="challenges">
-        <h2>Challenges</h2>
-        <ul>
-            <li>Handling peers going offline (heartbeat + timeout)</li>
-            <li>Avoiding blocking during transfers (multithreading)</li>
-            <li>Verification failure handling (delete corrupted file + fallback seeder)</li>
-        </ul>
-    </section>
-    <section class="improvements">
-        <h2>Improvements</h2>
-        <ul>
-            <li>Add encryption/authentication</li>
-            <li>Support wide-area networks (NAT traversal)</li>
-            <li>Better chunking/resume downloads (more BitTorrent-like)</li>
-        </ul>
-    </section>
-    
+    </div>
+
+    <main id="main">
+        <div class="container project-detail">
+
+            <a href="projects.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                Back to Projects
+            </a>
+
+            <div class="project-detail-header reveal">
+                <h1>P2P File Sharing System</h1>
+                <p>Simplified BitTorrent-style P2P file sharing with a UDP tracker, TCP transfers, and SHA-256 integrity checks.</p>
+                <div class="project-detail-tech">
+                    <span>Python</span>
+                    <span>Sockets</span>
+                    <span>UDP</span>
+                    <span>TCP</span>
+                    <span>Threading</span>
+                    <span>SHA-256</span>
+                    <span>Tkinter</span>
+                </div>
+                <div class="project-detail-links">
+                    <a href="https://github.com/itsowanga/p2p-file-sharing-system" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-gallery reveal">
+                <a href="./assets/p2p-seq.png" target="_blank" rel="noopener">
+                    <img src="./assets/p2p-seq.png" alt="P2P sequence diagram" loading="lazy">
+                </a>
+                <a href="./assets/p2p-down.png" target="_blank" rel="noopener">
+                    <img src="./assets/p2p-down.png" alt="P2P download GUI" loading="lazy">
+                </a>
+                <a href="./assets/p2p-terminal.png" target="_blank" rel="noopener">
+                    <img src="./assets/p2p-terminal.png" alt="P2P terminal output" loading="lazy">
+                </a>
+            </div>
+
+            <div class="project-section reveal">
+                <h2>Features</h2>
+                <ul>
+                    <li>Tracker registers seeders and file hashes</li>
+                    <li>Peers discover seeders via UDP</li>
+                    <li>File transfers via TCP (chunked)</li>
+                    <li>SHA-256 verification after download (auto + manual)</li>
+                </ul>
+            </div>
+
+            <div class="project-section reveal">
+                <h2>How It Works</h2>
+                <ol>
+                    <li>Seeder registers file + hash with tracker (UDP)</li>
+                    <li>Leecher requests seeders list (UDP)</li>
+                    <li>Leecher downloads from chosen peer (TCP)</li>
+                    <li>Hash verifies integrity; if fail, tries next seeder</li>
+                    <li>Complete file download with progress bar (Tkinter)</li>
+                </ol>
+            </div>
+
+            <div class="project-section reveal">
+                <h2>Challenges</h2>
+                <ul>
+                    <li>Handling peers going offline (heartbeat + timeout)</li>
+                    <li>Avoiding blocking during transfers (multithreading)</li>
+                    <li>Verification failure handling (delete corrupted file + fallback seeder)</li>
+                </ul>
+            </div>
+
+            <div class="project-section reveal">
+                <h2>Future Improvements</h2>
+                <ul>
+                    <li>Add encryption/authentication</li>
+                    <li>Support wide-area networks (NAT traversal)</li>
+                    <li>Better chunking/resume downloads (more BitTorrent-like)</li>
+                </ul>
+            </div>
+
+        </div>
     </main>
-    <footer>
-        <p>Copyright 2026 Sowanga Mbane</p>
-        <a href="mailto:sowanga.mbane@gmail.com">Email</a>
-        <a href="https://github.com/itsowanga" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank">LinkedIn</a>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Sowanga Mbane</p>
+            <div class="footer-links">
+                <a href="mailto:sowanga.mbane@gmail.com">Email</a>
+                <a href="https://github.com/itsowanga" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="./main.js"></script>
 </body>
 </html>

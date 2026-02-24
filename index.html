@@ -3,96 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Sowanga Mbane</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="Sowanga Mbane — Backend-focused junior developer building networking and data systems in Python, Java and JavaScript. Based in Benoni, South Africa.">
+    <meta name="author" content="Sowanga Mbane">
+    <meta property="og:title" content="Sowanga Mbane — Junior Software Developer">
+    <meta property="og:description" content="Backend-focused junior developer building networking and data systems in Python, Java and JavaScript.">
+    <meta property="og:type" content="website">
+    <title>Sowanga Mbane — Junior Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body class="page-home">
-    <header>
-        <nav>
+<body>
+
+    <a class="skip-nav" href="#main">Skip to content</a>
+
+    <header class="header">
+        <nav class="nav">
             <a class="nav-brand" href="index.html">
-                <img src="./assets/logo.png" alt="Sowanga Mbane logo">
+                <img src="./assets/logo.png" alt="Sowanga Mbane" width="36" height="36">
             </a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Resume.pdf" class="btn-nav" download>Resume</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
         </nav>
     </header>
-    <main>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-backdrop"></div>
+        <div class="mobile-menu-panel">
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <div class="mobile-menu-links">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Resume.pdf" download>Download Resume</a>
+            </div>
+            <div class="mobile-menu-social">
+                <a href="https://github.com/itsowanga" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <!-- Hero -->
         <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Sowanga Siyolise Mbane</h1>
-                    <h2>Junior Software Developer based in Benoni, South Africa</h2>
-                    <p>Backend-focused junior developer building networking and data systems in Python, Java and JavaScript.</p>
-                    <div class="cta">
-                        <a href="projects.html">View Projects</a>
-                        <a href="./assets/Resume.pdf" download>Download Resume</a>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <p class="hero-greeting hero-animate">Hi, I'm</p>
+                        <h1 class="hero-name hero-animate">Sowanga Mbane</h1>
+                        <p class="hero-title hero-animate">Junior Software Developer &middot; Benoni, South Africa</p>
+                        <p class="hero-desc hero-animate">Backend-focused developer building networking and data systems in Python, Java and JavaScript. BSc Computer Science &amp; Computer Engineering graduand at the University of Cape Town.</p>
+                        <div class="hero-actions hero-animate">
+                            <a href="projects.html" class="btn btn-primary">
+                                View Projects
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                            <a href="./assets/Resume.pdf" class="btn btn-outline" download>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                                Download Resume
+                            </a>
+                        </div>
+                        <div class="hero-social hero-animate">
+                            <a href="https://github.com/itsowanga" target="_blank" rel="noopener" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="mailto:sowanga.mbane@gmail.com" aria-label="Email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="hero-links">
-                        <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank">LinkedIn</a>
-                        <a href="https://github.com/itsowanga" target="_blank">GitHub</a>
+                    <div class="hero-photo hero-photo-animate">
+                        <div class="hero-photo-wrapper">
+                            <img src="./assets/photo.png" alt="Sowanga Mbane" width="320" height="320">
+                        </div>
                     </div>
-                </div>
-                <div class="hero-image">
-                    <img src="./assets/photo.png" alt="Sowanga Mbane">
                 </div>
             </div>
         </section>
-        <section class="about" id="about">
-            <h3>About</h3>
-            <p>BSc Computer Science & Computer Engineering graduand at the University of Cape Town.</p>
-            <p>Seeking backend or junior software engineering roles focused on systems, APIs, networking, and data.</p>
-        </section>
-        <section class="education">
-            <h3>Education</h3>
-            <p>2023-2026</p>
-            <p>University of Cape Town - BSc Computer Science & Computer Engineering</p>
-        </section>
-        <section class="projects">
-            <h3>Featured Projects</h3>
-            <a href="./projects.html">View All Projects</a>
-            <div class="project-container">
-                <div class="project-item">
-                    <h4><a href="p2p.html">Peer-to-Peer File Sharing System</a></h4>
-                    <p>Tracker-based P2P sharing with TCP/UDP transfers and SHA-256 integrity checks.</p>
-                    <p>Python | Tkinter | Socket Programming</p>
-                    <a href="p2p.html">View project →</a>
+
+        <!-- About -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">About</span>
+                    <h2>Who I Am</h2>
                 </div>
-                <div class="project-item">
-                    <h4><a href="codepulse.html">CodePulse - Offline Productivity Tracker</a></h4>
-                    <p>SQLite-backed session logging with REST API, live dashboard, and PDF exports.</p>
-                    <p>Python | C++ | SQLite | JavaScript</p>
-                    <a href="codepulse.html">View project →</a>
-                </div>
-                <div class="project-item">
-                    <h4><a href="farmyield.html">FarmYield Predictor - Decision Support Tool</a></h4>
-                    <p>Offline-first yield prediction using regression models with CSV outputs.</p>
-                    <p>Python | C++ | Machine Learning</p>
-                    <a href="farmyield.html">View project →</a>
+                <div class="about-content">
+                    <p>I'm a BSc Computer Science &amp; Computer Engineering graduand at the University of Cape Town, passionate about building robust backend systems, APIs, and data-driven tools.</p>
+                    <p>I'm seeking backend or junior software engineering roles focused on systems, networking, and data — where I can grow while solving meaningful technical problems.</p>
                 </div>
             </div>
         </section>
-        <section class="skills">
-            <h3>Skills</h3>
-            <p><strong>Languages:</strong> Python, C++, Java, JavaScript</p>
-            <p><strong>Web:</strong> HTML, CSS</p>
-            <p><strong>Databases:</strong> SQL, SQLite</p>
-            <p><strong>Tools/Systems:</strong> Git, GitHub, Networking, Linux, Windows</p>
+
+        <!-- Skills -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Skills</span>
+                    <h2>What I Work With</h2>
+                </div>
+                <div class="skills-grid">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML &amp; CSS</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">SQLite</span>
+                    <span class="skill-tag">Git &amp; GitHub</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Networking</span>
+                    <span class="skill-tag">Socket Programming</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Machine Learning</span>
+                </div>
+            </div>
         </section>
-        <section class="contact" id="contact">
-            <h3>Contact</h3>
-            <p>Open to Junior Software Developer roles, Internships or freelance projects.</p>
-            <a href="mailto:sowanga.mbane@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/itsowanga" target="_blank">GitHub</a>
+
+        <!-- Featured Projects -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Portfolio</span>
+                    <h2>Featured Projects</h2>
+                    <p>A selection of recent projects showcasing backend systems, data tools, and networking.</p>
+                </div>
+                <div class="projects-grid">
+                    <a href="p2p.html" class="project-card">
+                        <div class="project-card-thumb">
+                            <img src="./assets/p2p.png" alt="Peer-to-Peer File Sharing System" loading="lazy">
+                            <div class="project-card-overlay"><span>View Project</span></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>P2P File Sharing System</h3>
+                            <p>Tracker-based P2P sharing with TCP/UDP transfers and SHA-256 integrity checks.</p>
+                            <div class="project-card-tech">
+                                <span>Python</span>
+                                <span>Sockets</span>
+                                <span>Tkinter</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="codepulse.html" class="project-card">
+                        <div class="project-card-thumb">
+                            <img src="./assets/pulse.png" alt="CodePulse - Offline Productivity Tracker" loading="lazy">
+                            <div class="project-card-overlay"><span>View Project</span></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>CodePulse — Productivity Tracker</h3>
+                            <p>SQLite-backed session logging with REST API, live dashboard, and PDF exports.</p>
+                            <div class="project-card-tech">
+                                <span>Python</span>
+                                <span>C++</span>
+                                <span>SQLite</span>
+                                <span>Chart.js</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="farmyield.html" class="project-card">
+                        <div class="project-card-thumb">
+                            <img src="./assets/farm.png" alt="FarmYield Predictor" loading="lazy">
+                            <div class="project-card-overlay"><span>View Project</span></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>FarmYield Predictor</h3>
+                            <p>Offline-first yield prediction using regression models with CSV outputs.</p>
+                            <div class="project-card-tech">
+                                <span>Python</span>
+                                <span>C++</span>
+                                <span>ML</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects-cta">
+                    <a href="projects.html" class="btn btn-ghost">
+                        View All Projects
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
         </section>
+
+        <!-- Education -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Education</span>
+                    <h2>Academic Background</h2>
+                </div>
+                <div class="education-card">
+                    <span class="education-year">2023 – 2026</span>
+                    <div class="education-details">
+                        <h3>University of Cape Town</h3>
+                        <p>BSc Computer Science &amp; Computer Engineering</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="contact-cta-section reveal">
+            <div class="container">
+                <div class="contact-cta">
+                    <h2>Let's Work Together</h2>
+                    <p>Open to junior software developer roles, internships, or freelance projects. Let's connect.</p>
+                    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                        <a href="./assets/Resume.pdf" class="btn btn-outline" download>Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
-    
-    
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Sowanga Mbane</p>
+            <div class="footer-links">
+                <a href="mailto:sowanga.mbane@gmail.com">Email</a>
+                <a href="https://github.com/itsowanga" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
 </body>
 </html>

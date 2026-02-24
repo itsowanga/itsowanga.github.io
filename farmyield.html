@@ -3,79 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmyield - Sowanga Mbane</title>
+    <meta name="description" content="FarmYield Predictor — Offline-first yield prediction and risk alerts for smallholder maize farmers using regression models.">
+    <meta name="author" content="Sowanga Mbane">
+    <meta property="og:title" content="FarmYield Predictor — Sowanga Mbane">
+    <meta property="og:description" content="Offline-first yield prediction and risk alerts for smallholder maize farmers.">
+    <meta property="og:type" content="website">
+    <title>FarmYield Predictor — Sowanga Mbane</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body class="page-project">
+<body>
 
-    <header>
-        <nav>
-            <a class="nav-brand" href="index.html">0
-                <img src="./assets/logo.png" alt="Sowanga Mbane logo">
+    <a class="skip-nav" href="#main">Skip to content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <a class="nav-brand" href="index.html">
+                <img src="./assets/logo.png" alt="Sowanga Mbane" width="36" height="36">
             </a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Resume.pdf" class="btn-nav" download>Resume</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
         </nav>
     </header>
-    <main>
-        <h1>FarmYield Predictor - Decision Support Tool</h1>
-        <p>Offline-first yield prediction + risk alerts for smallholder maize farmers using a lightweight regression model.</p>
-        <p>Python | C++ | Machine Learning</p>
-        <a class="btn-link" href="https://github.com/itsowanga/farmyield-predictor" target="_blank">GitHub</a>
-        <div class="project-image">
-            <a href="./assets/farm-seq.png" target="_blank" rel="noopener">
-                <img src="./assets/farm-seq.png" alt="FarmYield Predictor - Decision Support Tool">
-            </a>
-            <a href="./assets/farm-gui.png" target="_blank" rel="noopener">
-                <img src="./assets/farm-gui.png" alt="FarmYield Predictor - Decision Support Tool">
-            </a>
-            <a href="./assets/farm-graph.png" target="_blank" rel="noopener">
-                <img src="./assets/farm-graph.png" alt="FarmYield Predictor - Decision Support Tool">
-            </a>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-backdrop"></div>
+        <div class="mobile-menu-panel">
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <div class="mobile-menu-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Resume.pdf" download>Download Resume</a>
+            </div>
+            <div class="mobile-menu-social">
+                <a href="https://github.com/itsowanga" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
         </div>
-        <section class="project-features">
-            <h2>Features</h2>
-            <ul>
-                <li>Offline-first yield prediction</li>
-                <li>Risk alerts for smallholder maize farmers</li>
-                <li>Lightweight regression model</li>
-                <li>Simple UI designed for low-spec devices</li>
-            </ul>
-        </section>
-        <section class="project-how-it-works">
-            <h2>How it works</h2>
-            <ol>
-                <li>Farmer enters field data and seasonal inputs</li>
-                <li>Model estimates expected yield for the season</li>
-                <li>Risk rules flag low-yield scenarios early</li>
-                <li>Results display with simple recommendations</li>
-            </ol>
-        </section>
-        <section class="challenges">
-            <h2>Challenges</h2>
-            <ul>
-                <li>Limited connectivity required offline-first design</li>
-                <li>Small datasets made model tuning difficult</li>
-                <li>Balancing accuracy with speed on low-spec devices</li>
-            </ul>
-        </section>
-        <section class="improvements">
-            <h2>Improvements</h2>
-            <ul>
-                <li>Add soil sensor integrations for richer inputs</li>
-                <li>Support additional crops beyond maize</li>
-                <li>Improve explainability for prediction drivers</li>
-            </ul>
-        </section>
+    </div>
+
+    <main id="main">
+        <div class="container project-detail">
+
+            <a href="projects.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                Back to Projects
+            </a>
+
+            <div class="project-detail-header reveal">
+                <h1>FarmYield Predictor</h1>
+                <p>Offline-first yield prediction and risk alerts for smallholder maize farmers using a lightweight regression model.</p>
+                <div class="project-detail-tech">
+                    <span>Python</span>
+                    <span>C++</span>
+                    <span>Machine Learning</span>
+                    <span>Regression</span>
+                </div>
+                <div class="project-detail-links">
+                    <a href="https://github.com/itsowanga/farmyield-predictor" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-gallery reveal">
+                <a href="./assets/farm-seq.png" target="_blank" rel="noopener">
+                    <img src="./assets/farm-seq.png" alt="FarmYield sequence diagram" loading="lazy">
+                </a>
+                <a href="./assets/farm-gui.png" target="_blank" rel="noopener">
+                    <img src="./assets/farm-gui.png" alt="FarmYield GUI interface" loading="lazy">
+                </a>
+                <a href="./assets/farm-graph.png" target="_blank" rel="noopener">
+                    <img src="./assets/farm-graph.png" alt="FarmYield prediction graph" loading="lazy">
+                </a>
+            </div>
+
+            <div class="project-section reveal">
+                <h2>Features</h2>
+                <ul>
+                    <li>Offline-first yield prediction</li>
+                    <li>Risk alerts for smallholder maize farmers</li>
+                    <li>Lightweight regression model</li>
+                    <li>Simple UI designed for low-spec devices</li>
+                </ul>
+            </div>
+
+            <div class="project-section reveal">
+                <h2>How It Works</h2>
+                <ol>
+                    <li>Farmer enters field data and seasonal inputs</li>
+                    <li>Model estimates expected yield for the season</li>
+                    <li>Risk rules flag low-yield scenarios early</li>
+                    <li>Results display with simple recommendations</li>
+                </ol>
+            </div>
+
+            <div class="project-section reveal">
+                <h2>Challenges</h2>
+                <ul>
+                    <li>Limited connectivity required offline-first design</li>
+                    <li>Small datasets made model tuning difficult</li>
+                    <li>Balancing accuracy with speed on low-spec devices</li>
+                </ul>
+            </div>
+
+            <div class="project-section reveal">
+                <h2>Future Improvements</h2>
+                <ul>
+                    <li>Add soil sensor integrations for richer inputs</li>
+                    <li>Support additional crops beyond maize</li>
+                    <li>Improve explainability for prediction drivers</li>
+                </ul>
+            </div>
+
+        </div>
     </main>
-    <footer>
-        <p>Copyright 2026 Sowanga Mbane</p>
-        <a href="mailto:sowanga.mbane@gmail.com">Email</a>
-        <a href="https://github.com/itsowanga" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank">LinkedIn</a>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Sowanga Mbane</p>
+            <div class="footer-links">
+                <a href="mailto:sowanga.mbane@gmail.com">Email</a>
+                <a href="https://github.com/itsowanga" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/sowanga-mbane-679803246/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="./main.js"></script>
 </body>
 </html>
