@@ -857,9 +857,10 @@ main {
     margin-top: 40px;
 }
 
-/* --- Education Section --- */
+/* --- Education & Experience Sections --- */
 
-.education-card {
+.education-card,
+.experience-card {
     display: flex;
     gap: 24px;
     align-items: flex-start;
@@ -871,7 +872,8 @@ main {
     margin: 0 auto;
 }
 
-.education-year {
+.education-year,
+.experience-year {
     font-weight: 700;
     font-size: 0.875rem;
     color: var(--primary);
@@ -881,12 +883,14 @@ main {
     border-radius: var(--radius-sm);
 }
 
-.education-details h3 {
+.education-details h3,
+.experience-details h3 {
     font-size: 1.125rem;
     margin-bottom: 4px;
 }
 
-.education-details p {
+.education-details p,
+.experience-details p {
     font-size: 0.9375rem;
 }
 
