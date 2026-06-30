@@ -99,25 +99,4 @@
     } else {
         reveals.forEach(el => el.classList.add('revealed'));
     }
-
-    // --- Project Filter (Projects Page) ---
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('[data-category]');
-
-    if (filterBtns.length > 0 && projectCards.length > 0) {
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const filter = btn.dataset.filter;
-
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                projectCards.forEach(card => {
-                    const match = filter === 'all' || card.dataset.category.includes(filter);
-                    card.style.display = match ? '' : 'none';
-                    if (match) card.style.animation = 'fadeIn 0.35s ease forwards';
-                });
-            });
-        });
-    }
 })();

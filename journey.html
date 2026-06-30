@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sowanga Mbane's Data Engineering journey — a timeline of certifications and milestones, documented from Day 1.">
+    <meta name="author" content="Sowanga Mbane">
+    <meta property="og:title" content="My Journey - Sowanga Mbane">
+    <meta property="og:description" content="Tracking the milestones on the way to becoming a Data Engineer, starting from Day 1.">
+    <meta property="og:type" content="website">
+    <title>My Journey - Sowanga Mbane</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- ==========================================================================
+         JOURNEY TIMELINE — self-contained styles (no external CSS/JS dependency)
+         These rules only affect .journey-stats / .timeline on this page, and reuse
+         this site's existing color variables (defined in style.css) so dark mode
+         keeps working automatically.
+
+         HOW TO ADD A NEW MILESTONE:
+         1. Open journey.html
+         2. Copy a <div class="timeline-item">...</div> block from below
+         3. Paste it as the FIRST item inside <div class="timeline"> (newest on top)
+         4. Edit the icon, date, title and description
+         5. Update the number inside .stat-number to match your new total
+         That's it — no other file needs to change.
+         ========================================================================== -->
+    <style>
+        .journey-stats {
+            display: flex;
+            justify-content: center;
+            margin: 8px 0 48px;
+        }
+
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 40px;
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        /* Single vertical line running behind every dot */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 21px;
+            top: 22px;
+            bottom: 22px;
+            width: 2px;
+            background: var(--border);
+            z-index: 1;
+        }
+
+        .timeline-item {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            gap: 20px;
+            padding-bottom: 32px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-icon {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--surface);
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            flex: 1;
+        }
+
+        .timeline-content .date {
+            display: block;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.0625rem;
+            margin-bottom: 6px;
+        }
+
+        .timeline-content p {
+            font-size: 0.9375rem;
+            margin-bottom: 10px;
+        }
+
+        .status {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 12px;
+            border-radius: 100px;
+        }
+
+        .status.completed {
+            background: var(--primary-bg);
+            color: var(--primary-dark);
+        }
+
+        @media (max-width: 600px) {
+            .timeline::before { left: 17px; }
+
+            .timeline-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            .timeline-item {
+                gap: 14px;
+                padding-bottom: 24px;
+            }
+
+            .stat-card {
+                padding: 20px 28px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a class="skip-nav" href="#main">Skip to content</a>
+
+    <header class="header">
+        <nav class="nav">
+            <a class="nav-brand" href="index.html">
+                <img src="./assets/logo.png" alt="Sowanga Mbane" width="36" height="36">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="journey.html" aria-current="page">Journey</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Resume.pdf" class="btn-nav" download>Resume</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-backdrop"></div>
+        <div class="mobile-menu-panel">
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <div class="mobile-menu-links">
+                <a href="index.html">Home</a>
+                <a href="journey.html" aria-current="page">Journey</a>
+                <a href="contact.html">Contact</a>
+                <a href="./assets/Resume.pdf" download>Download Resume</a>
+                <button class="mobile-theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <span class="label-dark">Dark Mode</span>
+                    <span class="label-light">Light Mode</span>
+                </button>
+            </div>
+            <div class="mobile-menu-social">
+                <a href="https://github.com/itsowanga" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/sowanga-mbane" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <div class="container">
+            <div class="page-header reveal">
+                <h1>My Journey</h1>
+                <p>I don't have Data Engineering projects to show yet. Instead, this page tracks the real milestones &mdash; certifications, education, and career moves &mdash; as I build toward becoming a Data Engineer, starting from Day 1.</p>
+            </div>
+        </div>
+
+        <div class="container" style="padding: 32px 0 80px;">
+
+            <div class="journey-stats reveal">
+                <div class="stat-card">
+                    <!-- Update this number whenever you add a new milestone below -->
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Milestones Completed</span>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TEMPLATE — copy this block to add a new milestone (paste at the TOP
+                 of .timeline below so the newest entry appears first). Only add an
+                 item once it's actually done — keep the list honest.
+
+            <div class="timeline-item">
+                <div class="timeline-icon">🎯</div>
+                <div class="timeline-content">
+                    <span class="date">October 2026</span>
+                    <h3>DP-700 Certified</h3>
+                    <p>Azure Data Engineer Associate — Microsoft Fabric.</p>
+                    <span class="status completed">Completed</span>
+                </div>
+            </div>
+            ====================================================================== -->
+
+            <div class="timeline reveal">
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">&#128188;</div>
+                    <div class="timeline-content">
+                        <span class="date">March 2026</span>
+                        <h3>Started ERP Systems Consultant Internship</h3>
+                        <p>SYSPRO &mdash; Enterprise exposure to Finance, Distribution &amp; Manufacturing data flows.</p>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">&#127891;</div>
+                    <div class="timeline-content">
+                        <span class="date">March 2026</span>
+                        <h3>Graduated BSc Computer Science</h3>
+                        <p>University of Cape Town &mdash; Computer Science degree.</p>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">&#9729;&#65039;</div>
+                    <div class="timeline-content">
+                        <span class="date">February 2026</span>
+                        <h3>AZ-900 Certified</h3>
+                        <p>Microsoft Azure Fundamentals &mdash; foundation in cloud concepts, services, and infrastructure.</p>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Sowanga Mbane</p>
+            <div class="footer-links">
+                <a href="mailto:sowanga.mbane@gmail.com">Email</a>
+                <a href="https://github.com/itsowanga" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/sowanga-mbane" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js?v=3"></script>
+</body>
+</html>
