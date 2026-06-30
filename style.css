@@ -1,5 +1,5 @@
 /* ================================================
-   SOWANGA MBANE — Portfolio
+   SOWANGA MBANE Portfolio
    ================================================ */
 
 :root {
@@ -880,7 +880,7 @@ main {
 }
 
 /* In-progress certifications get a neutral, dashed-outline badge instead
-   of the filled "earned" badge above — keeps the distinction honest. */
+   of the filled "earned" badge above keeps the distinction honest. */
 .certification-date.in-progress {
     background: transparent;
     border: 1px dashed var(--text-light);

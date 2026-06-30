@@ -3,7 +3,7 @@
 Personal portfolio site for Sowanga Mbane. BSc Computer Science graduate
 (University of Cape Town), currently an ERP Systems Consultant at SYSPRO,
 transitioning into Data Engineering with an Azure focus (DP-700 in progress).
-There are no Data Engineering projects to showcase yet — the site documents
+There are no Data Engineering projects to showcase yet the site documents
 the journey itself, starting from Day 1, rather than overstating experience
 that doesn't exist yet.
 
@@ -12,7 +12,7 @@ that doesn't exist yet.
 - `index.html` - Home page with overview, skills, work experience, education,
   certifications, and contact links.
 - `journey.html` - Vertical timeline of real milestones (certifications,
-  graduation, career moves). Self-contained and easy to extend — see the
+  graduation, career moves). Self-contained and easy to extend see the
   comment block at the top of the file for instructions on adding a new entry.
 - `contact.html` - Contact page.
 
